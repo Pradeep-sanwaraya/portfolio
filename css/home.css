@@ -182,7 +182,7 @@ header{
 flex-direction:column;
 gap:10px;
   padding:10px;
-  position:fixed;
+  position:relative;
   top:0:
   width:100%;
   z-index:1000:
@@ -195,7 +195,7 @@ justify-content:center;
 
 .sec1{
 flex-direction:column-reverse;
-gap:30px;
+
   height:auto;
 text-align:center;
   min-height:100vh;
