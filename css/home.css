@@ -181,6 +181,11 @@ margin-top:50px;
 header{
 flex-direction:column;
 gap:10px;
+  padding:10px;
+  position:fixed;
+  top:0:
+  width:100%;
+  z-index:1000:
 }
 
 ul{
@@ -189,9 +194,13 @@ justify-content:center;
 }
 
 .sec1{
-flex-direction:column;
+flex-direction:column-reverse;
 gap:30px;
+  height:auto;
 text-align:center;
+  min-height:100vh;
+  padding-top:100px:
+  padding-bottom:50px;
 }
 
 .div1{
