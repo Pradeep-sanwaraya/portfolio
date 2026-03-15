@@ -50,3 +50,29 @@
     line-height: 1.8;
     font-size: 18px;
 }
+/* Mobile Header Fix for All Pages */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Logo upar, menu niche */
+        padding: 15px 10px;
+        height: auto;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px; /* Name aur menu ke beech gap */
+    }
+
+    header ul {
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+        flex-wrap: wrap; /* Links screen se bahar nahi jayenge */
+        justify-content: center;
+    }
+
+    header li {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
