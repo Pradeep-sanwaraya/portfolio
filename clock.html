@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    .con{
+        height: 300px;
+        width: 300px;
+        box-shadow: 5px 0px 20px 10px rgba(0,0,0,0.3) ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+    }
+    .clock{
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+
+        box-shadow: 5px 0px 20px 10px rgba(0,0,0,0.3)inset ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .hr, .min, .sec{
+         position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translateX(-50%);
+      border-radius: 6px;
+
+    }
+    .hr{
+        background-color: black;
+        height: 70px;
+        width: 10px;
+        
+    }
+    .min {
+        background-color: rgb(218, 20, 20);
+        height: 90px;
+        width: 8px;
+    }
+     .sec{
+        background-color: rgb(136, 230, 5);
+        height: 100px;
+        width: 5px;
+    }
+</style>
+<body>
+    <div class="con">
+        <div class="clock">
+            <div class="hr"></div>
+            <div class="min"></div>
+            <div class="sec"></div>
+        </div>
+    </div>
+    <script>
+        let hrele=document.querySelector(".hr")
+        let minele=document.querySelector(".min")
+        let secele=document.querySelector(".sec")
+        setInterval(()=>{
+            let date= new Date()
+             const hr = date.getHours() *30;
+      const min = date.getMinutes()*6;
+      const sec = date.getSeconds()*6;
+      
+
+      hrele.style.transform = `translateX(-50%) rotate(${hr}deg)`;
+      minele.style.transform = `translateX(-50%) rotate(${min}deg)`;
+      secele.style.transform = `translateX(-50%) rotate(${sec}deg)`;
+    }, 1000);
+
+        
+    </script>
+</body>
+</html>
